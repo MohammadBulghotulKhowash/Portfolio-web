@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+
+:root {
+  --dark-clr-400: rgb(50, 55, 77);
+  --dark-clr-300: rgb(80, 109, 130);
+  --light-clr-200: rgb(157, 178, 191);
+  --light-clr-100: rgb(221, 230, 237);
+
+  --light-clr-100-op-50: rgb(221, 230, 237, 0.5);
+  --light-clr-100-op-30: rgb(221, 230, 237, 0.3);
+
+  --default-font: "Roboto", sans-serif;
+  --logo-font: "Protest Guerrilla", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--dark-clr-300);
+  color: var(--light-clr-100);
+  font-family: var(--default-font);
+}
+
+header {
+  padding-inline: 1rem;
+  z-index: 9999;
+}
+
+header nav {
+  border-bottom: 1.55px solid var(--light-clr-100-op-50);
+}
+
+header nav,
+nav ul,
+nav ul li .drop-link,
+main aside,
+main aside .aside-body .btn a {
+  display: flex;
+}
+
+header nav .logo a,
+nav ul li a {
+  color: var(--light-clr-100);
+}
+
+header nav .logo a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.8em;
+  font-family: var(--logo-font);
+}
+
+header nav ul {
+  gap: 0.8rem;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 250ms ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: var(--light-clr-200);
+}
+
+header nav ul .dropdown {
+  position: relative;
+}
+
+header nav ul li .drop-link .arrow,
+main aside figure .photo-profile,
+main aside .aside-body h1 .text-wrapper,
+main aside .aside-body .btn {
+  display: block;
+}
+
+header nav ul li .drop-link {
+  align-items: center;
+}
+
+header nav ul li .drop-item {
+  position: absolute;
+  border-radius: 5px;
+  outline: 1.5px solid var(--light-clr-200);
+  right: -0.4rem;
+  top: 1.8rem;
+  width: 9.8rem;
+  padding: 0.4rem;
+  background-color: var(--dark-clr-300);
+}
+
+header nav ul li .drop-item ol li {
+  margin-bottom: 0.3rem;
+}
+
+main aside {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+main aside figure {
+  margin-bottom: 1rem;
+}
+
+main aside figure .photo-profile {
+  width: 6.3em;
+  border-radius: 50%;
+  filter: grayscale(25%);
+  box-shadow: 2px 2px 3px var(--dark-clr-400);
+  border: 1.5px solid var(--dark-clr-300);
+}
+
+main aside .aside-body {
+  text-align: center;
+  z-index: 1;
+}
+
+main aside .aside-body .name {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+main aside .aside-body .name .hi-emoji {
+  font-size: 1.3em;
+  font-weight: initial;
+}
+
+main aside .aside-body h1 {
+  margin: 1.2rem 0 2rem 0;
+  background: linear-gradient(
+    -230deg,
+    var(--light-clr-100) 32%,
+    var(--light-clr-200) 68%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+main aside .aside-body .btn {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+main aside .aside-body .btn a {
+  text-decoration: none;
+  color: var(--light-clr-100);
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.8em 3em;
+  outline: 1.35px solid var(--light-clr-100);
+  border-radius: 3px;
+  font-weight: 500;
+  transition: all 250ms ease-in-out;
+}
+
+main aside .aside-body .btn a:hover {
+  background-color: var(--light-clr-200);
+}
+
+main aside .aside-body .btn a .call-arrow {
+  width: 1em;
+  border-bottom: 2px solid;
+}
+
+main aside .wave {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.3;
+  z-index: -1;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+main .container {
+  position: relative;
+  background-color: var(--light-clr-100-op-30);
+  height: 100vh;
+}
+
+main .container .about {
+  text-align: center;
+  padding-block: 1.5rem;
+  height: 100vh;
+}
+
+main .container .title {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+main .container .about p {
+  display: block;
+  font-size: 1.08em;
+  margin: 1.5rem 7rem;
+  font-weight: 500;
+}
+
+main .container .about .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding-block: 1.5rem;
+  align-items: center;
+}
+
+main .container .about .wrapper .card {
+  width: 200px;
+  height: 250px;
+  background-color: var(--light-clr-100);
+  color: var(--dark-clr-300);
+  border-radius: 8px;
+  padding-block-start: 0.5rem;
+  box-shadow: 2px 2px 3px var(--dark-clr-300);
+}
+
+main .container .about .wrapper .card figure .card-logo {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+main .container .about .wrapper .card p {
+  margin: 0.5rem 1rem 0 1rem;
+}
+
+main .container .portfolio {
+  position: relative;
+  height: 100vh;
+}
+main .container .portfolio .wave {
+  position: absolute;
+  opacity: 0.3;
+  width: 100%;
+  z-index: -1;
+}
+
+main .container .portfolio .wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+main .container .portfolio .wrapper .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+main .container .portfolio .wrapper .card-wrapper .card {
+  width: 325px;
+}
+
+main .container .portfolio .wrapper .card-wrapper .card .poster {
+  width: 300px;
+}
+
+footer {
+  margin-top: 100vh;
+  background-color: var(--dark-clr-400);
+  height: 70px;
+  padding: 2rem 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Responsiveness for tablets and larger phones */
+@media (max-width: 1024px) {
+  main .container .about .wrapper {
+    gap: 2rem;
+  }
+}
+
+/* Responsiveness for mobile phones */
+@media (max-width: 768px) {
+  main .container .about,
+  main .container {
+    height: auto;
+  }
+
+  main .container .about .wrapper {
+    flex-wrap: wrap;
+  }
+
+  main .container .about .wrapper .card {
+    width: 180px;
+    height: 220px;
+  }
+
+  main .container .about .wrapper .card p {
+    font-size: 0.85em;
+  }
+
+  main .container .portfolio .wave {
+    opacity: 0.15;
+  }
+
+  main .container .portfolio {
+    height: 155vh;
+  }
+
+  main .container .portfolio .wrapper .card-wrapper .card .poster {
+    width: 280px;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
